@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author zhangaiwen
  */
-@Api(value = "初始接口", tags = "初始简单接口")
+@Api(value = "初始接口", tags = "接口几种类型架构")
 @RestController
 @RequestMapping("hello/")
 public class MainController {
@@ -26,7 +26,5 @@ public class MainController {
     public String test() {
         return "hello ";
     }
-
-
 
 }

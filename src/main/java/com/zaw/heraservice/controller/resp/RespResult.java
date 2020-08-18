@@ -23,7 +23,11 @@ public class RespResult<T> {
 
     private T data;
 
-    public static <T> RespResult success(T t) {
+    public static <T> RespResult<T> success() {
+        return success("", null);
+    }
+
+    public static <T> RespResult<T> success(T t) {
         return success((String) null, t);
     }
 
@@ -37,7 +41,6 @@ public class RespResult<T> {
         if (Objects.nonNull(t)) {
             result.setData(t);
         }
-
         return result;
     }
 }

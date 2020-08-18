@@ -23,8 +23,8 @@ public class AlgorithmServiceImpl implements IAlgorithmService {
      * @return 动态和
      */
     @Override
-    public OneArrResp getSum(int[] intArr) {
-        intArr = new int[]{3, 1, 2, 10, 1};
+    public OneArrResp getSum(Integer[] intArr) {
+        intArr = new Integer[]{3, 1, 2, 10, 1};
         List<Integer> sunList = new ArrayList<>();
         int sum = 0;
         for (int i = 0; i < intArr.length; i++) {

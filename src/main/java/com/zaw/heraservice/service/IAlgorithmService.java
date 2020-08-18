@@ -16,5 +16,5 @@ public interface IAlgorithmService {
      * @param intArr 一维数组
      * @return 动态和
      */
-    OneArrResp getSum(int[] intArr);
+    OneArrResp getSum(Integer[] intArr);
 }

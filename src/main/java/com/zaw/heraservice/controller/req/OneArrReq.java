@@ -12,5 +12,5 @@ import lombok.Data;
 public class OneArrReq {
 
     @ApiModelProperty(value = "一维数组")
-    private int[] intArr;
+    private Integer[] intArr;
 }

@@ -6,8 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.2.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.3.2.RELEASE</version>
     </parent>
 
     <groupId>com.zaw</groupId>
@@ -15,27 +14,14 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <springboot.version>2.3.0.RELEASE</springboot.version>
-        <swagger.version>2.9.2</swagger.version>
-        <knife4j-discovery.version>1.0</knife4j-discovery.version>
+        <springboot.version>2.3.2.RELEASE</springboot.version>
         <knife4j.version>2.0.4</knife4j.version>
         <lombok.vsersion>1.18.12</lombok.vsersion>
+        <swagger.version>3.0.0</swagger.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-dependencies</artifactId>
-                <version>2.0.4</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
-        <!-- 基础 -->
+        <!-- springboot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -46,7 +32,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${springboot.version}</version>
         </dependency>
-
         <!-- 测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -59,13 +44,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
         <!-- Actuator监控器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
         <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -73,38 +56,12 @@
             <version>${lombok.vsersion}</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- swagger -->
+        <!-- swagger3 -->
         <dependency>
             <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
+            <artifactId>springfox-boot-starter</artifactId>
             <version>${swagger.version}</version>
         </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>
-
-        <!-- knife4j -->
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-discovery-spring-boot-starter</artifactId>
-            <version>${knife4j-discovery.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-spring-boot-starter</artifactId>
-            <version>${knife4j.version}</version>
-        </dependency>
-
-        <!-- 解决整合swagger2的问题:guava版本过高 -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>27.0-jre</version>
-        </dependency>
-
 
     </dependencies>
 
