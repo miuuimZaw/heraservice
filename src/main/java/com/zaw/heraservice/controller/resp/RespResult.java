@@ -1,7 +1,6 @@
 package com.zaw.heraservice.controller.resp;
 
 import io.micrometer.core.instrument.util.StringUtils;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,14 +13,34 @@ import java.util.Objects;
  */
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class RespResult<T> {
 
-    private Integer code;
+    private Integer code = 200;
 
-    private String msg;
+    private String msg = "success";
 
     private T data;
+
+    public RespResult(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public static <T> RespResult<T> error(String msg) {
+        return new RespResult(-1, msg);
+    }
+
+    public static <T> RespResult<T> error(String msg, T t) {
+        RespResult<T> result = new RespResult(-1, msg);
+        result.setData(t);
+        return result;
+    }
+
+    public static <T> RespResult<T> error(Integer code, String msg, T t) {
+        RespResult<T> result = new RespResult(-1, msg);
+        result.setData(t);
+        return result;
+    }
 
     public static <T> RespResult<T> success() {
         return success("", null);

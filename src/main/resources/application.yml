@@ -1,0 +1,22 @@
+# 设置项目端口号
+server:
+  port: 9090
+
+personal:
+  str: 普通字符
+  escapeStr: "双引号直接输出\n特殊字符"
+  specialStr: '单引号可以转义\n特殊字符'
+  bol: false
+  intValue: 56789
+  dolValue: 88.889
+  objList:
+    - dog
+    - cat
+    - monkey
+  objSet: [77,88,99]
+  objMap: [k1: v1, k2:v2]
+  positionList:
+    - name: zhangaiwen
+      address: shanghai
+    - name: mingming
+      address: beijing
