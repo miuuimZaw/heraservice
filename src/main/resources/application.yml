@@ -2,6 +2,10 @@
 server:
   port: 9090
 
+spring:
+  main:
+    log-startup-info: true
+
 personal:
   str: 普通字符
   escapeStr: "双引号直接输出\n特殊字符"
