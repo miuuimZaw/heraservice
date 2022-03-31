@@ -14,7 +14,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <springboot.version>2.3.3.RELEASE</springboot.version>
+        <springboot.version>2.5.12</springboot.version>
         <knife4j.version>2.0.4</knife4j.version>
         <lombok.vsersion>1.18.12</lombok.vsersion>
         <swagger.version>3.0.0</swagger.version>
